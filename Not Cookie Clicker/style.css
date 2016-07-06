@@ -1,0 +1,65 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor:default;
+}
+
+.container,
+.container > .div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.row > * {
+  flex: 1;
+}
+
+.div > .divText{
+  height: 100vh;
+  width: 30vw;
+  margin: auto;
+  display: inline-block;
+  cursor:default;
+}
+
+.divText {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+
+.textLeft {
+  margin: auto;
+  width: 20vw;
+  display: block;
+  justify-content: center;
+  text-align: left;
+  cursor:default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
+.textRight {
+  margin: 5vh auto;
+  width: 20vw;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 15px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  cursor:default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
