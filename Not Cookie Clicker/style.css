@@ -24,7 +24,7 @@
   width: 30vw;
   margin: auto;
   display: inline-block;
-  cursor:default;
+  cursor: default;
 }
 
 .divText {
@@ -37,6 +37,7 @@
 .textLeft {
   margin: auto;
   width: 20vw;
+  font-size: 20px;
   display: block;
   justify-content: center;
   text-align: left;

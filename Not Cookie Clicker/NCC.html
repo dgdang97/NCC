@@ -7,14 +7,20 @@
   </head>
   <body class="container row">
   <div class="divText" style="background-color:#008080">
-    <p id="ACAmount" class="textLeft" style="font-size:20px; margin: 10px auto auto auto"></p>
-    <p id="ACMulti" class="textLeft" style="font-size:20px"></p>
-    <p id="ACSpeed" class="textLeft" style="font-size:20px"></p>
-    <p id="IPAmount" class="textLeft" style="font-size:20px"></p>
+    <p id="info" class="textLeft" style="margin: auto; margin-top: 10px"> </p>
+    <p id="ACAmount" class="textLeft" style="margin: 10px auto auto auto"></p>
+    <p id="ACMulti" class="textLeft"></p>
+    <p id="ACSpeed" class="textLeft"></p>
+    <p id="IPAmount" class="textLeft"></p>
   </div>
 
   <div class="div" style="background-color:#008080">
-    <p style="font-size:200px; font-family:Arial;-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
+
+    <p id="button" style="font-size:200px; font-family:Arial; padding: 20px; margin: auto;
+    border: 10px solid black; border-radius: 1000px; background-color: #FFD700;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
+    onmousedown="mouseDown()"
+    onmouseup="mouseUp()"
     onclick="getCookie()"
     unselectable="on"
     onselectstart="return false;"
