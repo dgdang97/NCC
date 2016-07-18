@@ -1,62 +1,43 @@
+// Modifies the existing purchase buttons to buy background colors
 function buyBackground() {
-    document.getElementById('button1').style.backgroundColor = '#008080'
-    document.getElementById('button1').innerHTML = 'Teal!'
-    document.getElementById('button1').setAttribute('onclick', 'getTeal()')
 
-    document.getElementById('button2').style.backgroundColor = '#DA70D6'
-    document.getElementById('button2').innerHTML = 'Purple!'
-    document.getElementById('button2').setAttribute('onclick', 'buyPurple()')
-
-    document.getElementById('button3').style.backgroundColor = '#00FF00'
-    document.getElementById('button3').innerHTML = 'Green!'
-    document.getElementById('button3').setAttribute('onclick', 'buyGreen()')
-
-    document.getElementById('button4').style.backgroundColor = '#FFA500'
-    document.getElementById('button4').innerHTML = 'Orange!'
-    document.getElementById('button4').setAttribute('onclick', 'buyOrange()')
+    setButton('button1', '#008080', 'Teal', true)
+    setButton('button2', '#DA70D6', 'Purple', false, 'purpleBool = buyColor(purpleBool, document.getElementById("button2").style.backgroundColor)')
+    setButton('button3', '#00FF00', 'Green', false, 'greenBool = buyColor(greenBool, document.getElementById("button3").style.backgroundColor)')
+    setButton('button4', '#FFA500', 'Orange', false, 'orangeBool = buyColor(orangeBool, document.getElementById("button4").style.backgroundColor)')
 }
+
 function setcolor (color) {
   document.getElementById('div1').style.backgroundColor = color
   document.getElementById('div2').style.backgroundColor = color
   document.getElementById('div3').style.backgroundColor = color
 }
 
+function setButton (buttonId, colorCode, color, teal, cFunction) {
+  document.getElementById(buttonId).style.backgroundColor = colorCode
+  document.getElementById(buttonId).innerHTML = color + '!'
+  if (teal === true) {
+    document.getElementById(buttonId).setAttribute('onclick', 'getTeal()')
+  } else {
+    document.getElementById(buttonId).setAttribute('onclick', cFunction)
+  }
+}
+// Changes background back to base color
 function getTeal () {
   setcolor('#008080')
 }
 
-function buyPurple () {
-  if (purpleBool === true) {
-    setcolor('#DA70D6')
+function buyColor (boolean, color) {
+  if (boolean === true) {
+    setcolor(color)
+    return true
   } else {
     if (canHeAfford(cBackgroundCost)) {
       cookies = cookies - cBackgroundCost
-      purpleBool = true
-      setcolor('#DA70D6')
+      document.getElementById('cookieAmount').innerHTML = 'Points: ' + cookies.toFixed(0)
+      setcolor(color)
+      return true
     }
   }
-}
-
-function buyGreen () {
-  if (greenBool === true) {
-    setcolor('#00FF00')
-  } else {
-    if (canHeAfford(cBackgroundCost)) {
-      cookies = cookies - cBackgroundCost
-      greenBool = true
-      setcolor('#00FF00')
-    }
-  }
-}
-
-function buyOrange () {
-  if (orangeBool === true) {
-    setcolor('#FFA500')
-  } else {
-    if (canHeAfford(cBackgroundCost)) {
-      cookies = cookies - cBackgroundCost
-      orangeBool = true
-      setcolor('#FFA500')
-    }
-  }
+  return false
 }

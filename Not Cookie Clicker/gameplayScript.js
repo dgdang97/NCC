@@ -1,13 +1,16 @@
+// Sets the timing for the auto clickers
 let autoTime = setInterval(() => {
   cookies = cookies + ((autoClickers / 5) * autoMultiplier)
   document.getElementById('cookieAmount').innerHTML = 'Points: ' + cookies.toFixed(0)
 }, autoTimer)
 
+// Gives the player points based on multiplier
 function getCookie () {
   cookies = cookies + (1 * increaseMultiplier)
   document.getElementById('cookieAmount').innerHTML = 'Points: ' + cookies.toFixed(0)
 }
 
+// Buys autoclicker
 function buyAuto () {
   if (canHeAfford(autoPrice)) {
     cookies = cookies - autoPrice
@@ -21,6 +24,7 @@ function buyAuto () {
   }
 }
 
+// Increases auto-clicker muliplier
 function increaseAuto () {
   if (canHeAfford(autoIncreasePrice)) {
     cookies = cookies - autoIncreasePrice
@@ -34,6 +38,7 @@ function increaseAuto () {
   }
 }
 
+// Increases auto-clicker frequency
 function autoSpeed () {
   if (canHeAfford(autoSpeedPrice)) {
     cookies = cookies - autoSpeedPrice
@@ -53,6 +58,7 @@ function autoSpeed () {
   }
 }
 
+// Increases the multiplier of button clicking
 function increase () {
   if (canHeAfford(increasePrice)) {
     cookies = cookies - increasePrice

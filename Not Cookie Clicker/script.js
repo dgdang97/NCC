@@ -1,4 +1,4 @@
-let cookies = 0
+let cookies = 300000
 let increaseMultiplier = 1.0
 let autoClickers = 0
 let autoMultiplier = 1
@@ -29,6 +29,7 @@ function canHeAfford (it) {
   }
 }
 
+// Creates a clicking feel to the button by reducing size when pressed
 function mouseDown () {
   document.getElementById('buttonM').style.fontSize = '190px'
   document.getElementById('buttonM').style.margin = 'auto'

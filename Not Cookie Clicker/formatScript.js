@@ -1,4 +1,6 @@
 function priceUpdate () {
+  
+  document.getElementById('cookieAmount').innerHTML = 'Points: ' + cookies.toFixed(0)
   document.getElementById('button1').innerHTML = 'Buy Auto-Clicker! <br/> [' + autoPrice.toFixed(0) + ']'
   document.getElementById('button2').innerHTML = 'Increase Auto-Clicker Gain! <br/> [' + autoIncreasePrice.toFixed(0) + ']'
   document.getElementById('button3').innerHTML = 'Increase Auto-Clicker Speed! <br/> [' + autoSpeedPrice.toFixed(0) + ']'
