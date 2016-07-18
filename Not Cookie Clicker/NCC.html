@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="container row">
-  <div class="divText" style="background-color:#008080">
+  <div id="div1"  class="divText" style="background-color:#008080">
     <p id="info" class="textLeft" style="margin: auto; margin-top: 10px"> </p>
     <p id="ACAmount" class="textLeft" style="margin: 10px auto auto auto"></p>
     <p id="ACMulti" class="textLeft"></p>
@@ -14,9 +14,9 @@
     <p id="IPAmount" class="textLeft"></p>
   </div>
 
-  <div class="div" style="background-color:#008080">
+  <div id="div2" class="div" style="background-color:#008080">
 
-    <p id="button" style="font-size:200px; font-family:Arial; padding: 20px; margin: auto;
+    <p id="buttonM" style="font-size:200px; font-family:Arial; padding: 20px; margin: auto;
     border: 10px solid black; border-radius: 1000px; background-color: #FFD700;
     -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
     onmousedown="mouseDown()"
@@ -29,15 +29,15 @@
     </p>
   </div>
 
-  <div class="divText" style="background-color:#008080">
-    <p id="cookieAmount" class="textRight" style="font-size:20px; background-color:#FF0000"
+  <div id="div3" class="divText" style="background-color:#008080">
+    <p id="cookieAmount" class="textRight" style="background-color:#FF0000"
         unselectable="on"
         onselectstart="return false;"
         onmousedown="return false;">
       Points: 0
     </p>
 
-    <p id="AC" class="textRight" style="font-size:20px; background-color:#00FF00" onclick="buyAuto()"
+    <p id="button1" class="textRight" onclick="buyAuto()"
         unselectable="on"
         onselectstart="return false;"
         onmousedown="return false;">
@@ -46,7 +46,7 @@
       [15]
     </p>
 
-    <p id="ACM" class="textRight" style="font-size:20px; background-color:#00FF00" onclick="increaseAuto()"
+    <p id="button2" class="textRight" onclick="increaseAuto()"
         unselectable="on"
         onselectstart="return false;"
         onmousedown="return false;">
@@ -55,7 +55,7 @@
       [25]
     </p>
 
-    <p id="ACS" class="textRight" style="font-size:20px; background-color:#00FF00" onclick="autoSpeed()"
+    <p id="button3" class="textRight" onclick="autoSpeed()"
         unselectable="on"
         onselectstart="return false;"
         onmousedown="return false;">
@@ -64,7 +64,7 @@
       [50]
     </p>
 
-    <p id="IP" class="textRight" style="font-size:20px; background-color:#00FF00" onclick="increase()"
+    <p id="button4" class="textRight" onclick="increase()"
         unselectable="on"
         onselectstart="return false;"
         onmousedown="return false;">
@@ -72,7 +72,15 @@
       <br>
       [75]
     </p>
+
+    <p id="button5" class="textRight" onclick="changeMenu()">
+      Change the way the game looks!
+    </p>
+
   </div>
   <script src="script.js"></script>
+  <script src="gameplayScript.js"></script>
+  <script src="cosmeticBackground.js"></script>
+  <script src="formatScript.js"></script>
   </body>
 </html>

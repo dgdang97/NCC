@@ -52,6 +52,8 @@
   margin: 5vh auto;
   width: 20vw;
   padding: 10px 15px;
+  font-size: 20px;
+  background-color: #00FF00;
   border: 2px solid black;
   border-radius: 15px;
   display: block;
