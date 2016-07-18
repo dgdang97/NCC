@@ -33,7 +33,20 @@
   display: block;
 }
 
-
+.buttonFormat {
+  font-size:200px;
+  font-family:Arial;
+  padding: 20px;
+  margin: auto;
+  border: 10px solid black;
+  border-radius: 1000px;
+  background-color: #FFD700;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
 .textLeft {
   margin: auto;
   width: 20vw;
